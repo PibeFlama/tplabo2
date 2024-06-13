@@ -4,7 +4,7 @@ const controller={}
 
 const getAllCarreras =(req,res) => {
     
-    res.status(201).json(carreras)
+    res.status(200).json(carreras)
 };
 
 const getCarreraByID= (req,res) => {
@@ -38,9 +38,19 @@ const deleteCarreraById= (req,res) => {
 }
 
 
+const getAllMateriasDeCarrera =(req,res) => {
+    const id= req.params.id
+    const carrera = carreras.find(c => c.id == id)
+    res.status(200).json((carrera.materias))
+};
+
+/*const createMateriaEnCarrera
+
+
+
     
 
-module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById}
+module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById, getAllMateriasDeCarrera}
 
 
 

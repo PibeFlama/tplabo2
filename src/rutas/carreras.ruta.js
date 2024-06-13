@@ -9,6 +9,7 @@ router.get("/carreras", controller.getAllCarreras)
 router.get("/carreras/:id",middleware.validarExisteId, controller.getCarreraByID)
 router.post("/carreras", validadorSchema(schemaCarrera), controller.postCarrera)
 router.delete("/carreras/:id",middleware.validarExisteId, controller.deleteCarreraById)
+router.get("/carreras/:id/materias",middleware.validarExisteId, controller.getAllMateriasDeCarrera)
 
 
 
