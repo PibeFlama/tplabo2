@@ -16,6 +16,7 @@ El proyecto sigue una estructura básica de archivos y carpetas:
 + routes/: Carpeta que contiene los archivos de definición de rutas para cada recurso (carreras y materias).
 + controllers/: Carpeta que contiene los controladores para cada recurso, encargados de manejar las solicitudes HTTP.
 + middlewares/: Carpeta que contiene los middlewares utilizados en la aplicación, incluyendo los de validación de esquemas.
++ schemas/: 
 + data/: Carpeta que contiene el archivo JSON donde se almacenan los datos de las carreras y materias.
 ## Ejemplo del JSON de Datos:
 El archivo data.json en la carpeta data contiene un ejemplo de cómo están estructurados los datos de las carreras y materias:
@@ -49,6 +50,7 @@ Para instalar y ejecutar la API, sigue estos pasos:
 + `npm i joi`
 + `npm i -D nodemon` 
 4. Después de que se completen las instalaciones, puedes ejecutar la API con el siguiente comando:
++ `code .` (Nos dirige a Visual Studio Code) 
 + `npm run dev`
 
 + Por defecto, la API se ejecutará en el puerto 3000. Si deseas cambiar el puerto, puedes establecer la variable de entorno `PORT` antes de ejecutar el comando `npm start`.
