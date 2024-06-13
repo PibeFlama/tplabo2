@@ -10,5 +10,8 @@ const validarExisteId= (req,res,next) => {
     next()
 }
 
+const validarMateriaExisteOtraCarrera=(req,res,next) => {
+    
+} 
 
 module.exports= {validarExisteId}
