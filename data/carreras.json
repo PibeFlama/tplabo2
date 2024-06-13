@@ -22,5 +22,53 @@
             }
 
         ]
+    },
+    {
+        "id": 2,
+        "nombre": "ingenieria espacial",
+        "grado" : "primero",
+        "universidad" : "uba",
+        "materias" : [
+            {
+            "id": 3,
+            "nombre" : "aviones 1",
+            "cuatrimestral": false,
+            "anio": "1ro",
+            "carreraId": 2
+            },
+
+            {
+            "id": 4,
+            "nombre" : "naves espaciales",
+            "cuatrimestral": true,
+            "anio": "1ro",
+            "carreraId": 2
+            }
+
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "defensa planetaria",
+        "grado" : "primero",
+        "universidad" : "unpaz",
+        "materias" : [
+            {
+            "id": 5,
+            "nombre" : "contacto con aliens malos",
+            "cuatrimestral": true,
+            "anio": "1ro",
+            "carreraId": 3
+            },
+
+            {
+            "id": 6,
+            "nombre" : "bombazo nuclear a los aliens malos",
+            "cuatrimestral": true,
+            "anio": "2do",
+            "carreraId": 3
+            }
+
+        ]
     }
 ]
