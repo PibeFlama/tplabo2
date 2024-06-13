@@ -14,5 +14,28 @@
             }
 
         ]
+    },
+
+    {   
+        "id": 2,
+        "nombre": "medicina",
+        "grado": "primero",
+        "universidad": "unpaz",
+        "materias": [
+            {
+                "id" : 3,
+                "nombre": "anatomia 1",
+                "cuatrimestral": true,
+                "anio": "1ro",
+                "carreraId": 2
+            },
+            {
+                "id" : 4,
+                "nombre": "anatomia 2",
+                "cuatrimestral": true,
+                "anio": "2do",
+                "carreraId": 2
+            }
+        ]
     }
 ]

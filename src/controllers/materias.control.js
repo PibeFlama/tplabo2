@@ -1,7 +1,8 @@
 const materias= require("../../data/materias.json");
 const { message } = require("../schemas/materias.schemas");
-const controller={}
+const controller = {}
 const carreras = require("../../data/carreras.json")
+<<<<<<< Updated upstream
 
 
 const mostrarMaterias= (req,res) => {
@@ -30,6 +31,21 @@ const postMateria= (req,res) =>{
 const MateriasbyId = (req,res) => {
     id= req.params.id
     materia= materias.find(m => m.id==id)
+=======
+const materias = []
+carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
+const mostrarMaterias= (req,res) => {
+    console.log(materias.length)
+    res.status(200).json(materias)
+}
+
+
+
+
+const MateriasbyId = (req,res) => {
+    const id = req.params.id
+    const materia = materias.find(m => (m.id == id))
+>>>>>>> Stashed changes
     res.status(200).json(materia)
 }
 
@@ -43,4 +59,8 @@ const deleteMateria= (req,res) => {
 }
 
 
+<<<<<<< Updated upstream
 module.exports = {postMateria, mostrarMaterias, MateriasbyId, deleteMateria}
+=======
+module.exports = {mostrarMaterias, MateriasbyId, deleteMateria}
+>>>>>>> Stashed changes

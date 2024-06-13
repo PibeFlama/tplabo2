@@ -5,12 +5,16 @@ const middleware= require("../middlewares/materias.middlewares")
 const validadorSchema= require("../middlewares/validarSchemas")
 const schemaMateria= require("../schemas/materias.schemas")
 
+
 router.get("/materias", controller.mostrarMaterias)
+<<<<<<< Updated upstream
 router.post("/carreras/:id/materia",validadorSchema(schemaMateria), controller.postMateria)
+=======
+>>>>>>> Stashed changes
 router.get("/materias/:id",middleware.validarExistebyId ,controller.MateriasbyId)
 router.delete("/materias/:id",middleware.validarExistebyId ,controller.deleteMateria)
 
-module.exports= router
+module.exports = router
 
 
 
