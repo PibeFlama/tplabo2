@@ -1,5 +1,6 @@
-const materias= require("../../data/materias.json")
-
+const carreras = require("../../data/carreras.json")
+const materias = []
+carreras.forEach((carrera) => materias.push(carrera.materias))
 const validarExistebyId= (req,res,next) => {
     const id= req.params.id;
     const valiMateria= materias.findIndex(c => c.id==id)

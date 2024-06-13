@@ -1,13 +1,29 @@
 [
     {
         "id": 1,
-        "nombre": "doctorado en ser capo",
+        "nombre": "lgti",
         "grado" : "primero",
         "universidad" : "unpaz",
         "materias" : [
             {
             "id": 1,
             "nombre" : "analisis matematico 1",
+            "cuatrimestral": true,
+            "anio": "1ro",
+            "carreraId": 1
+            }
+
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "medicina",
+        "grado" : "primero",
+        "universidad" : "unpaz",
+        "materias" : [
+            {
+            "id": 1,
+            "nombre" : "anatomia 1",
             "cuatrimestral": true,
             "anio": "1ro",
             "carreraId": 1
