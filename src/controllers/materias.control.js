@@ -1,21 +1,25 @@
 
 const { message } = require("../schemas/materias.schemas");
 const controller={}
-const carreras = require("../../data/carreras.json")
-const materias = []
+let carrerascontroller = require("../../src/controllers/carreras.control")
+let carreras = carrerascontroller.carreras
+let materias = []
 carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
 
-const mostrarMaterias= (req,res) => {
-    console.log(materias)
-    
+const mostrarMaterias = (req,res) => {
+    materias = []
+    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
     res.status(200).json(materias)
 }
 
 const postMateria= (req,res) =>{
+    materias = []
+    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
+
     const data= req.body
     let idm=1;
     if(materias.length){
-        const xm= materias.map(c=> c.id)
+        const x= materias.map(c=> c.id)
         idm= Math.max(...x)+1
     }
     materias.push(
@@ -29,18 +33,24 @@ const postMateria= (req,res) =>{
 
 
 const MateriasbyId = (req,res) => {
+    materias = []
+    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
     id= req.params.id
-    materia= materias.find(m => m.id==id)
+    const materia = materias.find(m => m.id==id)
     res.status(200).json(materia)
 }
 
-const deleteMateria= (req,res) => {
+const deleteMateria = (req,res) => {
+
+    materias = []
+    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
+    
     id = req.params.id
-    materia= materias.findIndex(m => m.id==id)
-    borrar= materias.splice(materia,1)
-    res.status(200).json({message: "se borró la materia: ", objeto: borrar[0]})
-
-
+    const materia = materias.find( m => m.id == id)
+    const carrera = carreras.find( c => c.id == materia.carreraId)
+    const materiax = carrera.materias.findIndex(m => (m.id == id))
+    borrar = carrera.materias.splice(materiax,1)
+    res.status(200).json({message: "se borró la materia: ", objeto:materia})
 }
 
 
