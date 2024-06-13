@@ -24,7 +24,9 @@ Para instalar y ejecutar la API, sigue estos pasos:
 1. Clona este repositorio en tu máquina local.
 2. Abre una terminal y navega hasta el directorio del proyecto.
 3. Ejecuta el siguiente comando para instalar las dependencias:
-+ `npm install`
++ `npm i express`
++ `npm i joi`
++ `npm i -D nodemon` 
 4. Después de que se completen las instalaciones, puedes ejecutar la API con el siguiente comando:
 + `npm run dev`
 
