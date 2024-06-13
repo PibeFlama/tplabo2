@@ -8,7 +8,7 @@ const getAllCarreras =(req,res) => {
 };
 
 const getCarreraByID= (req,res) => {
-    const id= req.params.id;
+    const id = req.params.id;
     const carrera= carreras.find(c => c.id==id);
     res.status(200).json(carrera)
 

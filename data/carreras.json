@@ -11,6 +11,14 @@
             "cuatrimestral": true,
             "anio": "1ro",
             "carreraId": 1
+            },
+
+            {
+            "id": 2,
+            "nombre" : "estructuras discretas",
+            "cuatrimestral": true,
+            "anio": "1ro",
+            "carreraId": 1
             }
 
         ]
