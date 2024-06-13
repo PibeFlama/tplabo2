@@ -44,15 +44,13 @@ const getAllMateriasDeCarrera =(req,res) => {
     res.status(200).json((carrera.materias))
 };
 
-/*const createMateriaEnCarrera
+/*const createMateriaEnCarrera*/
 
 
 
     
 
 module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById, getAllMateriasDeCarrera}
-
-
 
 
 

@@ -1,9 +1,12 @@
 const materias= require("../../data/materias.json");
 const { message } = require("../schemas/materias.schemas");
 const controller={}
+const carreras = require("../../data/carreras.json")
 
 
 const mostrarMaterias= (req,res) => {
+    const materias = []
+    carreras.forEach((carrera) => materias.push(carrera.materias))
     res.status(200).json(materias)
 }
 
