@@ -2,6 +2,8 @@ const carreras= require("../../data/carreras.json");
 const controller={}
 
 
+
+
 const getAllCarreras =(req,res) => {
     
     res.status(200).json(carreras)

@@ -6,11 +6,18 @@
         "universidad" : "unpaz",
         "materias" : [
             {
-            "id": 1,
-            "nombre" : "analisis matematico 1",
-            "cuatrimestral": true,
-            "anio": "1ro",
-            "carreraId": 1
+                "id": 1,
+                "nombre" : "analisis matematico 1",
+                "cuatrimestral": true,
+                "anio": "1ro",
+                "carreraId": 1
+            },
+            {
+                "id": 2,
+                "nombre" : "estructuras discretas",
+                "cuatrimestral": true,
+                "anio": "1ro",
+                "carreraId": 1
             }
 
         ]
@@ -22,11 +29,18 @@
         "universidad" : "unpaz",
         "materias" : [
             {
-            "id": 1,
-            "nombre" : "anatomia 1",
-            "cuatrimestral": true,
-            "anio": "1ro",
-            "carreraId": 1
+                "id": 3,
+                "nombre" : "anatomia 1",
+                "cuatrimestral": true,
+                "anio": "1ro",
+                "carreraId": 2
+            },
+            {
+                "id": 4,
+                "nombre" : "anatomia 2",
+                "cuatrimestral": true,
+                "anio": "1ro",
+                "carreraId": 2
             }
 
         ]

@@ -3,9 +3,10 @@ const { message } = require("../schemas/materias.schemas");
 const controller={}
 const carreras = require("../../data/carreras.json")
 const materias = []
-carreras.forEach((carrera) => materias.push(carrera.materias))
+carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
 
 const mostrarMaterias= (req,res) => {
+    console.log(materias)
     
     res.status(200).json(materias)
 }
