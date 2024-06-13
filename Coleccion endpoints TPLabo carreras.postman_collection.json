@@ -41,15 +41,24 @@
 									"request": {
 										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nombre\": \"derecho constitucionalista\",\r\n    \"cuatrimestral\": true,\r\n    \"anio\": \"1ro\",        \r\n    \"carreraId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "localhost:3000/carreras/1/materias",
+											"raw": "localhost:3000/carreras/3/materias",
 											"host": [
 												"localhost"
 											],
 											"port": "3000",
 											"path": [
 												"carreras",
-												"1",
+												"3",
 												"materias"
 											]
 										}
@@ -121,6 +130,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"abogacia\",\r\n        \"grado\": \"primero\",\r\n        \"universidad\": \"unpaz\",\r\n        \"materias\": [\r\n            {\r\n                \"nombre\": \"derecho civil\",\r\n                \"cuatrimestral\": true,\r\n                \"anio\": \"1ro\",\r\n                \"carreraId\": 3\r\n            },\r\n            {   \r\n                \"nombre\": \"derecho penal\",\r\n                \"cuatrimestral\": true,\r\n                \"anio\": \"1ro\",\r\n                \"carreraId\": 3\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "localhost:3000/carreras",
 							"host": [
@@ -148,14 +166,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:3000/materias/1",
+									"raw": "localhost:3000/materias/4",
 									"host": [
 										"localhost"
 									],
 									"port": "3000",
 									"path": [
 										"materias",
-										"1"
+										"4"
 									]
 								}
 							},
@@ -167,14 +185,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:3000/materias/1",
+									"raw": "localhost:3000/materias/5",
 									"host": [
 										"localhost"
 									],
 									"port": "3000",
 									"path": [
 										"materias",
-										"1"
+										"5"
 									]
 								}
 							},
