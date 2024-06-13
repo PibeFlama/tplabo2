@@ -4,6 +4,8 @@
 + Ramos Pablo
 + Mariano Bihurriet
 + Morandi Diego
+## Nombre del Grupo:
+### `404 - Page Not Found`
 ## Descripción del Proyecto:
 Este proyecto consiste en una API REST desarrollada en Node.js utilizando el framework Express. La API expone recursos relacionados con carreras y materias, permitiendo operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre estos recursos. La estructura del proyecto sigue las convenciones de separación por recurso, con rutas, controladores y middlewares organizados de manera adecuada.
 
@@ -18,13 +20,34 @@ El proyecto sigue una estructura básica de archivos y carpetas:
 ## Ejemplo del JSON de Datos:
 El archivo data.json en la carpeta data contiene un ejemplo de cómo están estructurados los datos de las carreras y materias:
 
+[<br>
+---{<br>
+-----"id": 1,<br>
+-----"nombre": "Gestion de tecnologias de la informacion.",<br>
+-----"grado" : "Lincenciatura",<br>
+-----"universidad" : "unpaz",<br>
+-----"materias" :<br>
+------ [<br>
+---------{<br>
+-----------"id": 1,<br>
+------------"nombre" : "analisis matematico 1",<br>
+------------"cuatrimestral": true,<br>
+------------"anio": "1ro",<br>
+------------"carreraId": 1<br>
+---------}<br>
+------ ]<br>
+---}<br>
+]<br>
+
 ## Instalación y Ejecución de la API:
 Para instalar y ejecutar la API, sigue estos pasos:
 
 1. Clona este repositorio en tu máquina local.
 2. Abre una terminal y navega hasta el directorio del proyecto.
 3. Ejecuta el siguiente comando para instalar las dependencias:
-+ `npm install`
++ `npm i express`
++ `npm i joi`
++ `npm i -D nodemon` 
 4. Después de que se completen las instalaciones, puedes ejecutar la API con el siguiente comando:
 + `npm run dev`
 
