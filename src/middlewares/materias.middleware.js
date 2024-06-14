@@ -1,5 +1,4 @@
-let carrerascontroller = require("../controllers/carreras.control")
-let carreras = carrerascontroller.carreras
+let carreras = require("../../data/carreras.json")
 let materias = []
 const validarExisteIdMateria = (req,res,next) => {
 
