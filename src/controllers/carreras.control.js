@@ -7,9 +7,10 @@ const getAllCarreras = (req, res) => {
 };
 
 const getCarreraByID= (req,res) => {
-    const id= req.params.id;
-    const carrera= carreras.find(c => c.id==id);
+    const id = req.params.id;
+    const carrera = carreras.find(c => c.id==id);
     res.status(200).json(carrera)
+    console.log(carrera)
 };
 
 const postCarrera= (req,res) =>{
@@ -49,15 +50,19 @@ const postCarrera= (req,res) =>{
 
 const deleteCarreraById= (req,res) => {
     const id= req.params.id
-    const posic= carreras.findIndex(c => c.id==id)
-    const borrar= carreras.splice(posic,1)
-    res.status(200).json({mensaje: "se borra la carrera: ", objeto: borrar[0]})
+    const carrera = carreras.find(c => c.id==id)
+    if (carrera){
+        carreras.splice(carrera,1)
+        res.status(200).json({mensaje: "se borra la carrera: ", objeto: carrera})
+    }
 }
 
 const getAllMateriasDeCarrera =(req,res) => {
     const id= req.params.id
     const carrera = carreras.find(c => c.id == id)
-    res.status(200).json((carrera.materias))
+    if (carrera){
+        res.status(200).json((carrera.materias))
+    }
 };
 
 const postMateriaEnCarrera = (req,res) => {
@@ -68,6 +73,7 @@ const postMateriaEnCarrera = (req,res) => {
     const id = req.params.id
     const data = req.body
     const carrera = carreras.find(c => c.id == id)
+    
     const materia = { 
         "id" : Math.max(...materias.map(m => m.id)) + 1,
         "nombre": data.nombre,
@@ -75,8 +81,12 @@ const postMateriaEnCarrera = (req,res) => {
         "anio": data.anio,
         "carreraId": id
         }
-    carrera.materias.push(materia)
-    res.status(201).json(materia)
+
+    if (carrera){
+        carrera.materias.push(materia)
+        res.status(201).json(materia)
+    }
+    
 }
 
 module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById, getAllMateriasDeCarrera, postMateriaEnCarrera, carreras}

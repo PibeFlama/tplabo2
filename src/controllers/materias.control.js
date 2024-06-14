@@ -14,21 +14,22 @@ const MateriasbyId = (req,res) => {
     carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
     id= req.params.id
     const materia = materias.find(m => m.id==id)
+    console.log(materia)
     res.status(200).json(materia)
 }
-
+ 
 const deleteMateria = (req,res) => {
-
     materias = []
-    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
-    
     id = req.params.id
+    carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
     const materia = materias.find( m => m.id == id)
-    const carrera = carreras.find( c => c.id == materia.carreraId)
-    const materiax = carrera.materias.findIndex(m => (m.id == id))
-    borrar = carrera.materias.splice(materiax,1)
-    res.status(200).json({message: "se borró la materia: ", objeto:materia})
-}
+    const carrera = {}
 
+    if (materia){
+        carrera = carreras.find( c => c.id == materia.carreraId)
+        carrera.materias.splice(materia,1)
+        res.status(200).json({message: "se borró la materia: ", objeto:materia})
+    }
+}
 
 module.exports = {mostrarMaterias, MateriasbyId, deleteMateria}
