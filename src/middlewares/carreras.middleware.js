@@ -1,7 +1,6 @@
 const carreras= require("../../data/carreras.json")
 
-
-const validarExisteId= (req,res,next) => {
+const validarExisteId = (req,res,next) => {
     const id= req.params.id;
     const caId= carreras.findIndex(c => c.id==id)
     if(caId<0){
@@ -9,6 +8,5 @@ const validarExisteId= (req,res,next) => {
     }
     next()
 }
-
 
 module.exports= {validarExisteId}

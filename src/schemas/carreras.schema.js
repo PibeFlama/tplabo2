@@ -1,5 +1,6 @@
 const Joi = require("joi")
-const materiasSchema= require("./materias.schemas")
+const materiasSchema = require("./materias.schema").materiasSchema
+
 const carreraSchema = Joi.object().keys(
     {
         nombre: Joi.string().required().messages({
@@ -15,12 +16,10 @@ const carreraSchema = Joi.object().keys(
             "any.required": "debe ingresar la universidad",
             "string.empty": "no puede dejar vacio el campo universidad"
         }),
-        materias: Joi.array().required().items(materiasSchema)
-        
+        materias: Joi.array().items(materiasSchema).required()
     }
 )
-
-module.exports= carreraSchema
+module.exports= {carreraSchema}
 
 
 

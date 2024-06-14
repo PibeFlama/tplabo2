@@ -1,5 +1,5 @@
 
-const { message } = require("../schemas/materias.schemas");
+const { message } = require("../schemas/materias.schema");
 const controller={}
 let carrerascontroller = require("../../src/controllers/carreras.control")
 let carreras = carrerascontroller.carreras
@@ -12,6 +12,7 @@ const mostrarMaterias = (req,res) => {
     res.status(200).json(materias)
 }
 
+/*
 const postMateria= (req,res) =>{
     materias = []
     carreras.forEach(c => c.materias.forEach(m => materias.push(m)))
@@ -30,6 +31,7 @@ const postMateria= (req,res) =>{
         carreraId: data.carreraId})
         res.status(201).json(materias[materias.length-1])
 };
+*/
 
 
 const MateriasbyId = (req,res) => {
@@ -54,4 +56,4 @@ const deleteMateria = (req,res) => {
 }
 
 
-module.exports = {postMateria, mostrarMaterias, MateriasbyId, deleteMateria}
+module.exports = {mostrarMaterias, MateriasbyId, deleteMateria}

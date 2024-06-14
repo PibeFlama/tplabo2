@@ -1,7 +1,7 @@
 const express = require('express')
 const port = process.env.port ?? 3000
-const rutasC=require("./rutas/carreras.ruta")
-const rutasM=require("./rutas/materias.rutas")
+const rutasC = require("./rutas/carreras.ruta").router
+const rutasM = require("./rutas/materias.ruta").router
 const app = express()
 
 app.use(express.json());

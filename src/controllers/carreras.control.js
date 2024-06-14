@@ -34,7 +34,7 @@ const postCarrera= (req,res) =>{
                 "nombre": m.nombre,
                 "cuatrimestral": m.cuatrimestral,
                 "anio": m.anio,
-                "carreraId": m.carreraId
+                "carreraId": idc
             }
             materias.push(m)
             materiasdecarrera.push(m)
@@ -71,19 +71,17 @@ const postMateriaEnCarrera = (req,res) => {
         "nombre": data.nombre,
         "cuatrimestral": data.cuatrimestral,
         "anio": data.anio,
-        "carreraId": data.carreraId
+        "carreraId": id
         }
     carrera.materias.push(materia)
     res.status(201).json(carrera.materias)
-
-
 }
 
 
 
     
 
-module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById, getAllMateriasDeCarrera,postMateriaEnCarrera,carreras}
+module.exports= {getAllCarreras, getCarreraByID, postCarrera, deleteCarreraById, getAllMateriasDeCarrera, postMateriaEnCarrera, carreras}
 
 
 
